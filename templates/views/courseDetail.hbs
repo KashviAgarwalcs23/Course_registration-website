@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{course.title}} - Details</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .course-detail-container {
+            text-align: center;
+            padding: 50px 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        .course-detail-container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .course-detail-container p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .course-detail-container .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .course-detail-container .btn:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div
+        class="course-detail-container"
+        style="background-image: url('https://media.istockphoto.com/id/171159522/photo/grunge-purple-background.jpg?s=612x612&w=0&k=20&c=Dum5i_DLThrxOIWzUxo9wxp2UPDXZXs_JbU-CvAjo74=');"
+    >
+        <h1>{{course.title}}</h1>
+        <p>{{course.description}}</p>
+
+        <!-- Add your custom course information here -->
+        <div class="additional-info">
+            <p>{{course.additionalInfo}}</p>
+        </div>
+
+        <!-- Back to Dashboard button -->
+        <a href="/dashboard" class="btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>

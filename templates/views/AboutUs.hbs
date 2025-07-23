@@ -1,0 +1,292 @@
+{{>navbar}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillGateway - Course Registration</title>
+<link rel="shortcut icon" href="https://as1.ftcdn.net/v2/jpg/02/22/15/10/1000_F_222151012_kiiItUsujiyauZlOTIKfeldhSymiJViu.jpg" > .
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ecf0f1;  /* Soft light gray */
+      margin: 0;
+      height: 100vh; /* Ensure full viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Top Bar / Notification Bar Styling */
+    .notification-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #16a085;  /* Soft teal */
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      display: none;  /* Initially hidden */
+      opacity: 0;  /* Make it invisible initially */
+      transition: opacity 1s ease, top 1s ease;  /* Smooth fade-in and slide-down */
+      z-index: 1000;  /* Ensure it's on top of other elements */
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #2c3e50;  /* Dark gray for header */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;  /* Keeps header on top */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    /* Website Name */
+    .website-name {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    /* Navbar Links */
+    .navbar {
+      display: flex;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .navbar li {
+      margin-left: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #27ae60;  /* Soft green for hover */
+      border-radius: 4px;
+    }
+
+    /* Content Section with Background Image */
+    .content-section {
+      width: 100%;
+      min-height: 500px; /* Adjust height based on your content */
+      background-image: url('https://cdn.prod.website-files.com/64760069e93084646c9ee428/649ef6799df88b07dbece820_code-html-vs-css%20(1)-p-1600.jpg');
+      background-size: cover; /* Make the image cover the section */
+      background-position: center center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px 0;
+      color: white;
+      margin-top: 80px; /* Ensure it appears below the fixed header */
+    }
+
+    .content-section p {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .content-section button {
+      background-color: #f39c12;  /* Bright orange for buttons */
+      color: white;
+      font-size: 16px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .content-section button:hover {
+      background-color: #e67e22;  /* Slightly darker orange for hover */
+    }
+
+    /* Central Message Styling */
+    .central-message {
+      text-align: center;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;  /* Smooth fade-in effect */
+    }
+
+    .central-message h1 {
+      font-family: 'Roboto', sans-serif;
+      color: #e74c3c;  /* Bold red for title */
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    .central-message p {
+      font-family: 'Open Sans', sans-serif;
+      color: #7f8c8d;  /* Neutral grayish color for subtitle */
+      font-size: 22px;
+      font-weight: 300;
+      margin-top: 10px;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    /* Section Below the Fold */
+    .below-fold {
+      width: 100%;
+      min-height: 500px;
+      background-color: #ffffff;  /* White background for this section */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    /* About Us Section */
+    .about-us {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start; /* Align items at the start */
+      padding: 50px 20px;
+      background-color: #f4f4f4;  /* Light gray background */
+    }
+
+    .about-us .text {
+      width: 50%;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .about-us img {
+      width: 30%;  /* Adjust image size */
+      margin-right: 40px;
+      border-radius: 8px;  /* Rounded corners for the image */
+    }
+
+    .about-us h2 {
+      color: #2c3e50;  /* Dark gray title */
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .about-us p {
+      font-family: 'Open Sans', sans-serif;
+      color: #7f8c8d;  /* Neutral grayish color */
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 15px;
+    }
+
+    .about-us .highlight {
+      font-weight: bold;
+      color: #e74c3c;  /* Highlighted text in red */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Notification Bar (Welcome Message) -->
+  <div class="notification-bar">
+    <span class="message">Welcome to SkillGateway! Start your learning journey today!</span>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="website-name">SkillGateway</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content Section with Background Image -->
+  <div class="content-section">
+    <div>
+      <p class="central-message">The best efficient free platform to start your learning journey</p>
+      <button onclick="scrollToSection()">Explore Now</button>
+    </div>
+  </div>
+
+
+  <!-- About Us Section -->
+  <div class="about-us" id="about-us">
+    <img src="https://img.freepik.com/premium-vector/rock-climber-climbing-cliff-cartoon-style_1057-168777.jpg?w=740" alt="Our Mission"> <!-- Image 1 -->
+    <div class="text">
+      <h2>Our Mission</h2>
+      <p>At this platform, our mission is to inspire and empower learners to explore new ideas and skills. We believe that education should be accessible and engaging for everyone. This website offers a wide range of online courses, utilizing the best resources available in India and beyond. Our user-friendly platform makes it easy for you to find and access the courses that matter most to you.</p>
+    </div>
+  </div>
+
+  <div class="about-us">
+    <img src="https://cdn.vectorstock.com/i/1000v/76/38/children-characters-stand-in-circle-holding-hands-vector-47447638.avif" alt="Our Story"> <!-- Image 2 -->
+    <div class="text">
+      <h2>Our Story</h2>
+      <p>Founded in 2023 in India, SkillGateway was born out of a passion for teaching and a desire to make learning resources easily accessible. Our goal is to create a platform where anyone can find and master new topics online. We are a dedicated team of educators and tech enthusiasts committed to providing high-quality online courses. With diverse expertise, we ensure that our content is both informative and enjoyable.</p>
+    </div>
+  </div>
+
+  <div class="about-us">
+    <img src="https://static.vecteezy.com/system/resources/previews/002/256/536/non_2x/business-man-cartoon-character-business-success-concept-free-vector.jpg" alt="Why Choose SkillGateway?"> <!-- Image 3 -->
+    <div class="text">
+      <h2>Why Choose SkillGateway?</h2>
+      <p>It offers high-quality content crafted by experienced educators. Explore our diverse range of topics tailored to various interests and skill levels. Enjoy flexible learning at your own pace with our user-friendly platform. We keep track of your progress, so you can easily see how much of your course journey you’ve completed. Join a supportive community where you can connect with fellow learners. We provide affordable pricing options to ensure education is accessible. Earn certificates to showcase your skills and enhance your resume. Plus, we focus on high-quality resources relevant to the Indian context.</p>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scroll to the About Us section
+    function scrollToSection() {
+      document.getElementById('about-us').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    window.onload = function() {
+      var notificationBar = document.querySelector('.notification-bar');
+      notificationBar.style.display = 'block';
+      setTimeout(function() {
+        notificationBar.style.opacity = 1;
+      }, 100);
+
+      setTimeout(function() {
+        notificationBar.style.opacity = 0;
+      }, 10000);
+
+      setTimeout(function() {
+        notificationBar.style.display = 'none';
+      }, 11000);
+    };
+  </script>
+</body>
+</html>

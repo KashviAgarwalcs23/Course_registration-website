@@ -1,0 +1,12 @@
+{
+    "watch": ["src"],                    
+    "ext": "js,json,hbs,css",            
+    "ignore": ["src/assets/*"],           
+    "exec": "node src/app.js",            
+    "env": {
+      "NODE_ENV": "development",        
+      "PORT": 3000                        
+    },
+    "delay": 500                          
+  }
+  

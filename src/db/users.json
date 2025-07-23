@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": ".com",
+    "password": "securepassword123"
+  },
+  {
+    "id": 2,
+    "name": "Kashvi Agarwal",
+    "email": "agarwalkashvi06@gmail.com",
+    "password": "123456790-"
+  },
+  {
+    "id": 3,
+    "name": "Kashvi Agarwal",
+    "email": "agarwalkashvi06@gmail.com",
+    "password": "123456790-"
+  },
+  {
+    "id": 4,
+    "name": "Kashvi Agarwal",
+    "email": "agarwalkashvi06@gmail.com",
+    "password": "123456790-"
+  },
+  {
+    "id": 5,
+    "name": "Akash ",
+    "email": "akash@gmail.com",
+    "password": "3456789"
+  },
+  {
+    "id": 6,
+    "name": "BoB",
+    "email": "bob@gmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 7,
+    "name": "finland",
+    "email": "finland@gmail.com",
+    "password": "asfg"
+  },
+  {
+    "id": 8,
+    "name": "Kashvi Agarwal",
+    "email": "agarwalkashvi06@gmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 9,
+    "name": "Kashvi Agarwal",
+    "email": "agarwalkashvi06@gmail.com",
+    "password": "1234566"
+  },
+  {
+    "id": 10,
+    "name": "Kashvi Agarwal2",
+    "email": "agarwalkashvi@gmail.com",
+    "password": "$2b$10$xRuhC6S8oviNWkwYvMoMIeZ8Ir1mto8MfR2Z4W63O/l.sQapQ8IIe"
+  },
+  {
+    "id": 11,
+    "name": "Keerthi Reddy",
+    "email": "Keerthireddy@gmail.com",
+    "password": "$2b$10$yK3PjuHFOr9wSGOj1ZkSLu5QSpnlwHoBdgxZVyYXIKa/tSmHr1lSu",
+    "courses": []
+  },
+  {
+    "id": 12,
+    "name": "Kashvi Agarwal ",
+    "email": "agarwalkashvi.cs23@bmsce.ac.in",
+    "password": "$2b$10$WqdvlzAy15HouYmhluvQ5.lF0TBW1SMbZdo.NV1mySd3nK0LWMIyK",
+    "courses": []
+  },
+  {
+    "id": 13,
+    "name": "abracadabra",
+    "email": "gnarajya194@gmail.com",
+    "password": "$2b$10$/JSPQUEZjY34bNMsrsQMzu4Pi.4jldOuFWephMRWD9UbXf9rpJqhe",
+    "courses": []
+  },
+  {
+    "id": 14,
+    "name": "Kashvi Agarwal",
+    "email": "kashviag@gmail.com",
+    "password": "$2b$10$YDAzzSCtXnjX5XTtFJZfUeFFFX3NSKBTja7GdTCfn9p6p4dsLvFkW",
+    "courses": []
+  },
+  {
+    "id": 15,
+    "name": "Kanishka Sharma",
+    "email": "kanishkasharma.cs@bmsce.ac.in",
+    "password": "$2b$10$nC/0DcdMRa5f9mVjQHfgtOW402kX78sPThpEjHIlu4RW5SeAc58PK",
+    "courses": []
+  },
+  {
+    "id": 16,
+    "name": "Aiswarya",
+    "email": "hnm@gmail.com",
+    "password": "$2b$10$GRZq1mRvDDhnvihWJ4tDOu7PCclv7sRpMCV00lNbcsRyyuWoWxrGa",
+    "courses": []
+  }
+]

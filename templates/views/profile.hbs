@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{user.name}}!</h1>
+    
+    <h3>Your Details:</h3>
+    <ul>
+        <li>Name: {{user.name}}</li>
+        <li>Email: {{user.email}}</li>
+        <!-- Add more user details as needed -->
+    </ul>
+
+    <h3>Your Enrolled Courses:</h3>
+    <ul>
+        {{#each courses}}
+            <li>{{this.courseName}} - {{this.courseDescription}}</li>
+        {{/each}}
+    </ul>
+    
+</body>
+</html>
